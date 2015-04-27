@@ -20,5 +20,3 @@ gem 'execjs'
 gem "mini_magick"
 gem 'devise'
 gem 'searchkick'
-gem 'formtastic', '~> 3.0'
-gem "nifty-generators", :group => :development
