@@ -7,6 +7,7 @@
       <th>Last name</th>
       <th>Address</th>
       <th>Phone</th>
+      <th>Program</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,6 +19,7 @@
         <td><%= account.last_name %></td>
         <td><%= account.address %></td>
         <td><%= account.phone %></td>
+        <td><%= account.program_id %></td>
         <td><%= link_to 'Show', account, class: "btn btn-link" %></td>
         <td><%= link_to 'Edit', edit_account_path(account), class: "btn btn-link" %></td>
         <td><%= link_to 'Destroy', account, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %></td>

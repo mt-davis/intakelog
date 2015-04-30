@@ -19,6 +19,10 @@
     <%= f.label :last_name %><br>
     <%= f.text_field :last_name, class: "form-control" %>
   </div>
+    <div class="form-group">
+    <%= f.label :program %><br>
+    <%= f.collection_select :program_id, Program.all, :id, :program, {prompt: "Choose a Program"}, {class: "btn btn-default dropdown-toggle"} %>
+  </div>
   <div class="form-group">
     <%= f.label :address %><br>
     <%= f.text_field :address, class: "form-control" %>

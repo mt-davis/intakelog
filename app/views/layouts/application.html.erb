@@ -9,12 +9,16 @@
   <%= render 'layouts/bootstrap' %>
 </head>
 <body>
+    <div class="container">
 <%= render "layouts/navbar" %>
+</div>
  <div class="container-fluid">
      <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 <%= yield %>
+<div class="container">
 <%= render "layouts/footer" %>
+</div>
 </div>
 </body>
 </html>
