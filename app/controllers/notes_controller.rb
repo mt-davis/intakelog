@@ -22,6 +22,7 @@ class NotesController < ApplicationController
 
   def create
     @note = Note.new(note_params)
+    @note.user_id = current_user.id
     @note.save
     respond_with(@note)
   end
