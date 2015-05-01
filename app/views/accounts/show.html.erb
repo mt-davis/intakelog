@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+
 
 <p>
   <strong>First name:</strong>
@@ -29,6 +29,6 @@
 <strong>Created:</strong> 
 <%= @account.created_at %>
 </p>
-
+<%= link_to "Write a Note", new_account_note_path(@account), class: "btn btn-primary" %>
 <%= link_to 'Edit', edit_account_path(@account), class: "btn btn-link" %> |
 <%= link_to 'Back', accounts_path, class: "btn btn-link" %>

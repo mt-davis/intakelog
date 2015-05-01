@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-  resources :notes
-
-  resources :programs
 
   devise_for :users
-  resources :accounts
+  resources :accounts do
+  resources :notes, except: [:show, :index]
+end
+resources :programs
 
   get 'pages/index'
 

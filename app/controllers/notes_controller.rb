@@ -1,5 +1,7 @@
 class NotesController < ApplicationController
   before_action :set_note, only: [:show, :edit, :update, :destroy]
+  before_action :set_account
+  before_action :authenticate_user!
 
   respond_to :html
 
@@ -23,6 +25,7 @@ class NotesController < ApplicationController
   def create
     @note = Note.new(note_params)
     @note.user_id = current_user.id
+    @note.account_id = @account.id
     @note.save
     respond_with(@note)
   end
@@ -40,6 +43,10 @@ class NotesController < ApplicationController
   private
     def set_note
       @note = Note.find(params[:id])
+    end
+    
+    def set_account
+      @account = Account.find(params[:account_id])
     end
 
     def note_params
