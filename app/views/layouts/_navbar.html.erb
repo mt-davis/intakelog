@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-static-top">
+<nav class="navbar n">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -24,14 +24,13 @@
       <ul class="nav navbar-nav navbar-right">
          <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
-          <li> <%= link_to "Create Accounts", new_account_path %></li>
-          <li> <%= link_to "Show Accounts", accounts_path %></li>
-          <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
-          <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
-          <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
+          <li> <%= link_to "Create Account", new_account_path, class: "fa fa-user" %></li>
+          <li> <%= link_to "Show Accounts", accounts_path, class: "fa fa-users" %></li>
+          <li><%= link_to "Edit Profile", edit_user_registration_path, class: "fa fa-pencil-square-o" %></li>
+          <li><%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "fa fa-sign-out" %></li>
         <% else %>
-          <li><%= link_to "Sign up", new_user_registration_path %></li>
-          <li><%= link_to "Sign in", new_user_session_path %></li>
+          <li><%= link_to "Sign up", new_user_registration_path,  class: "fa fa-sign-in" %></li>
+          <li><%= link_to "Sign in", new_user_session_path, class: "fa fa-sign-in" %></li>
         <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
