@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :notes
+
   resources :programs
 
   devise_for :users
