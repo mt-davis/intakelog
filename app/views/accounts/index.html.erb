@@ -19,7 +19,13 @@
         <td><%= account.last_name %></td>
         <td><%= account.address %></td>
         <td><%= account.phone %></td>
-        <td><%= account.program.program %></td>
+        <td>
+<%if account.program%>
+   <%=account.program.program%>
+<%else%>
+   Program doesn't exist
+<%end%>
+</td>
         <td><%= link_to 'Show', account, class: "btn btn-link" %></td>
         <td><%= link_to 'Edit', edit_account_path(account), class: "btn btn-link" %></td>
         <td><%= link_to 'Destroy', account, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %></td>
