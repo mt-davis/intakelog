@@ -1,7 +1,6 @@
-
-
-<p>
-  <strong>First name:</strong>
+<div class="row">
+  <div class="col-md-3">
+     <strong>First name:</strong>
   <%= @account.first_name %>
 </p>
 
@@ -29,6 +28,23 @@
 <strong>Created:</strong> 
 <%= @account.created_at %>
 </p>
+
 <%= link_to "Write a Note", new_account_note_path(@account), class: "btn btn-primary" %>
+    </div>
+    
+    <div class="col-md-9">
+      <% if @notes.blank? %>
+      <h3>No Notes For This Account</h3>
+      <% else %>
+      <% @notes.each do |note| %>
+      <p><%= note.comment %></p>
+<% end %>
+<% end %>
+      
+    </div>
+    </div>
+
 <%= link_to 'Edit', edit_account_path(@account), class: "btn btn-link" %> |
 <%= link_to 'Back', accounts_path, class: "btn btn-link" %>
+
+

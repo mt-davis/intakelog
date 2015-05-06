@@ -26,8 +26,8 @@
         <% if user_signed_in? %>
           <li> <%= link_to "Create Account", new_account_path, class: "fa fa-user" %></li>
           <li> <%= link_to "Show Accounts", accounts_path, class: "fa fa-users" %></li>
-          <li><%= link_to "Edit Profile", edit_user_registration_path, class: "fa fa-pencil-square-o" %></li>
-          <li><%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "fa fa-sign-out" %></li>
+          <li> <%= link_to "Edit Profile", edit_user_registration_path, class: "fa fa-pencil-square-o" %></li>
+          <li> <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "fa fa-sign-out" %></li>
         <% else %>
           <li><%= link_to "Sign up", new_user_registration_path,  class: "fa fa-sign-in" %></li>
           <li><%= link_to "Sign in", new_user_session_path, class: "fa fa-sign-in" %></li>

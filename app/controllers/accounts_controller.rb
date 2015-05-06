@@ -9,7 +9,7 @@ class AccountsController < ApplicationController
   end
 
   def show
-    respond_with(@account)
+    @notes = Note.where(account_id: @account.id) #Where a note belong to the current account
   end
 
   def new
