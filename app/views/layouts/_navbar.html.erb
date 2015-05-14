@@ -29,10 +29,11 @@
           <li> <%= link_to "Edit Profile", edit_user_registration_path, class: "fa fa-pencil-square-o" %></li>
           <li> <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "fa fa-sign-out" %></li>
         <% else %>
-          <li><%= link_to "Sign up", new_user_registration_path,  class: "fa fa-sign-in" %></li>
+         <!-- <%= link_to "Sign up", new_user_registration_path,  class: "fa fa-sign-in" %> -->
           <li><%= link_to "Sign in", new_user_session_path, class: "fa fa-sign-in" %></li>
         <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+</div>

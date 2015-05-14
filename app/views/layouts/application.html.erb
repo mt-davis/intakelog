@@ -12,7 +12,6 @@
     <div class="container">
 <%= render "layouts/navbar" %>
 </div>
-<div class="container">
  <div class="container-fluid">
     <% flash.each do |name, msg| %>
       <% if msg.is_a?(String) %>
@@ -20,7 +19,6 @@
           <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
           <%= content_tag :div, msg, :id => "flash_#{name}" %>
         </div>
-         </div>
          </div>
       <% end %>
     <% end %> 
