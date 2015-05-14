@@ -63,7 +63,6 @@
                 <% if user_signed_in? %>
                   <% if (note.user == current_user) || (current_user.admin?) %>
                     <%= link_to "Edit", edit_account_note_path(@account, note) %>
-                    <%= link_to "Delete", account_note_path(@account, note), method: :delete %>
                   <% end %>
                 <% end %>
               </td>
