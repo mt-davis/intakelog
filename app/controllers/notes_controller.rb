@@ -1,7 +1,7 @@
 class NotesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_note, only: [:edit, :update, :destroy]
   before_action :set_account
-  before_action :authenticate_user!
   before_action :check_user, only: [:edit, :update, :destroy]
 
   # GET /notes/new
@@ -58,11 +58,17 @@ class NotesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_note
-      @note = note.find(params[:id])
+      @note = Note.find(params[:id])
     end
 
     def set_account
       @account = Account.find(params[:account_id])
+    end
+    
+     def check_user
+      unless (@note.user == current_user) || (current_user.admin?)
+        redirect_to root_url, alert: "Sorry, this not belongs to someone else"
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

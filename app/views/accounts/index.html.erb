@@ -28,8 +28,10 @@
 </td>
         <td><%= link_to 'Show', account, class: "btn btn-link" %></td>
         <td><%= link_to 'Edit', edit_account_path(account), class: "btn btn-link" %></td>
+        <% if user_signed_in? && current_user.admin? %>
         <td><%= link_to 'Destroy', account, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %></td>
       </tr>
+    <% end %>
     <% end %>
   </tbody>
 </table>
