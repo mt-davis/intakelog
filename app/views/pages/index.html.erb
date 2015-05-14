@@ -1,9 +1,12 @@
-<div class="container">
-<div class="jumbotron">
-  <div class="center">
+  <div class="jumbotron">
+  <div class="center-text">
+    <% if user_signed_in? %>
   <h1>Bridges InTake App</h1>
-  <p>This Application Is For Bridges Employees Only.</p>
+  <p>Please Remember to Log Out Once You Are Done.</p>
+  <% else %> 
+  <h1>Welcome To Bridges InTake App</h1>
+  <p>For Bridges Employees Only.</p>
   <%= link_to "Sign in", new_user_session_path, class: "btn btn-primary btn-lg" %>
-</div>
+  <% end %>
 </div>
 </div>
