@@ -27,7 +27,7 @@
 
 <p>
 <strong>Created:</strong> 
-<%= @account.created_at %>
+<%= @account.created_at.strftime ("%-b-%-d-%y") %>
 </p>
 
     <%= link_to "Write a note", new_account_note_path(@account), class: "btn btn-primary" %>
@@ -61,9 +61,14 @@
                 <p><%= h(note.comment).gsub(/\n/, '<br/>').html_safe %></p>
                 
                 <% if user_signed_in? %>
-                  <% if (note.user == current_user) || (current_user.admin?) %>
+                   <% if (current_user.admin?) %>
+                    <%= link_to "Edit", edit_account_note_path(@account, note) %>   |
+                    <%= link_to "Delete", account_note_path(@account, note), method: :delete %>
+                    <% else %>
+                    <% if (note.user == current_user) %> 
                     <%= link_to "Edit", edit_account_note_path(@account, note) %>
                   <% end %>
+                <% end %>
                 <% end %>
               </td>
             </tr>

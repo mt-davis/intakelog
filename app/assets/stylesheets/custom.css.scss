@@ -8,24 +8,30 @@ body {
   background: #A9D0F5;
 }
 
-.container .jumbotron {
-  background: url(https://s3.amazonaws.com/intakelog/site_showcase_bg.jpg) no-repeat center;
-  height:500px;
+.jumbotron {
+  background: url(https://s3.amazonaws.com/intakelog/site_showcase_bg.jpg) no-repeat center !important;
+  height:500px; 
 	overflow:none;
 	color: #fff;
   
 }
   
- h1 {
-    color: #fff;
+ .jumbotron h1 {
+    color: #fff !important;
     font-weight: bold;
     text-align: center;
     font-family: 'Ribeye', cursive !important;
   }
   
-  .jumbotron p{
+ .jumbotron p{
+  color: #fff;
   text-align: center;
   font-family: 'Ribeye', cursive !important;
+}
+
+ .blockqoute {
+  color: #fff;
+  text-align: center;
 }
 
 .container .footer {
