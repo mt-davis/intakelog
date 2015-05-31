@@ -1,4 +1,4 @@
-<h1>Listing accounts</h1>
+<h1>Listing Client</h1>
 <table class="table table-hover table-condensed">
     <tr>
       <th>First name</th>
@@ -24,10 +24,10 @@
    Program doesn't exist
 <%end%>
 </td>
-        <td><%= link_to 'Show', account, class: "btn btn-link" %></td>
-        <td><%= link_to 'Edit', edit_account_path(account), class: "btn btn-link" %></td>
+        <td><%= link_to 'Show Client', account, class: "btn btn-link" %></td>
+        <td><%= link_to 'Edit Client', edit_account_path(account), class: "btn btn-link" %></td>
         <% if user_signed_in? && current_user.admin? %>
-        <td><%= link_to 'Destroy', account, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %></td>
+        <td><%= link_to 'Destroy Client', account, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %></td>
       </tr>
     <% end %>
     <% end %>
@@ -36,4 +36,4 @@
 
 <br>
 
-<%= link_to 'New Account', new_account_path %>
+<%= link_to 'Add Client', new_account_path %>

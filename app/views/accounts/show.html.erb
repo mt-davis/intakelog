@@ -62,11 +62,11 @@
                 
                 <% if user_signed_in? %>
                    <% if (current_user.admin?) %>
-                    <%= link_to "Edit", edit_account_note_path(@account, note) %>   |
-                    <%= link_to "Delete", account_note_path(@account, note), method: :delete %>
+                    <%= link_to "Edit Note", edit_account_note_path(@account, note) %>   |
+                    <%= link_to "Delete Note", account_note_path(@account, note), method: :delete %>
                     <% else %>
                     <% if (note.user == current_user) %> 
-                    <%= link_to "Edit", edit_account_note_path(@account, note) %>
+                    <%= link_to "Edit Client", edit_account_note_path(@account, note) %>
                   <% end %>
                 <% end %>
                 <% end %>

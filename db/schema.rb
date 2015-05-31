@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150506195532) do
+ActiveRecord::Schema.define(version: 20150529192033) do
 
   create_table "accounts", force: true do |t|
     t.string   "first_name"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20150506195532) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "program_id"
+    t.boolean  "return_client", default: false
   end
 
   create_table "notes", force: true do |t|
@@ -33,6 +34,12 @@ ActiveRecord::Schema.define(version: 20150506195532) do
 
   create_table "programs", force: true do |t|
     t.string   "program"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "returns", force: true do |t|
+    t.boolean  "return"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
