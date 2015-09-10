@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :insurances
+
   devise_for :users
   resources :accounts do
   resources :notes, except: [:show, :index]
