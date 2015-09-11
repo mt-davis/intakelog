@@ -1,9 +1,9 @@
 <%= form_for(@account) do |f| %>
   <% if @account.errors.any? %>
-    <div id="error_explanation">
-
-      <h2><%= pluralize(@account.errors.count, "error") %> prohibited this account from being saved:</h2>
-
+    <div id="error_explanation" class= "alert alert-danger alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+      <h4><%= pluralize(@account.errors.count, "error") %> prohibited this review from being saved:</h4>
+      
       <ul>
       <% @account.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -37,8 +37,8 @@
     <%= f.text_field :address, class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label :phone %><br> example: 203-000-0000
-    <%= f.text_field :phone, class: "form-control" %>
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone, class: "form-control", placeholder: "203 000-0000" %>
   </div>
   <div class="actions">
     <%= f.submit class: "btn btn-primary" %>
