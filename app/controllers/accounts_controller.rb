@@ -1,7 +1,6 @@
 class AccountsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_account, only: [:show, :edit, :update, :destroy]
-  require 'will_paginate'
 
   respond_to :html
 
