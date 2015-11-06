@@ -6,7 +6,7 @@ class AccountsController < ApplicationController
   respond_to :html
 
   def index
-    @account = Account.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 8)
+    @account = Account.all.paginate(:page => params[:page], :per_page => 8).order("created_at DESC")
   end
 
   def show
