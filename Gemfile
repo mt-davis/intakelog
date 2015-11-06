@@ -12,6 +12,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'rails_12factor', group: :production
 gem 'pg', group: :production
+gem 'will_paginate', '~> 3.0'
+gem 'will_paginate-bootstrap'
 gem 'carrierwave'
 gem "fog"
 gem "figaro"
@@ -22,6 +24,4 @@ gem 'devise'
 gem 'searchkick'
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
-  gem 'will_paginate', '~> 3.0'
-  gem 'will_paginate-bootstrap'
 end
