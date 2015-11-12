@@ -1,0 +1,40 @@
+<h1>Listing Client</h1>
+<table class="table table-hover table-condensed">
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Address</th>
+      <th>Phone</th>
+      <th>Program</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @account.each do |account| %>
+      <tr>
+        <td><%= account.first_name %></td>
+        <td><%= account.last_name %></td>
+        <td><%= account.address %></td>
+        <td><%= account.phone %></td>
+        <td>
+<%if account.program%>
+   <%=account.program.program%>
+<%else%>
+   Program doesn't exist
+<%end%>
+</td>
+        <td><%= link_to 'Show Client', account, class: "btn btn-link" %></td>
+        <td><%= link_to 'Edit Client', edit_account_path(account), class: "btn btn-link" %></td>
+        <% if user_signed_in? && current_user.admin? %>
+        <td><%= link_to 'Destroy Client', account, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %></td>
+      </tr>
+    <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= will_paginate @account , renderer: BootstrapPagination::Rails %>
+<br>
+<%= link_to 'Add Client', new_account_path %>

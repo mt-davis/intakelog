@@ -13,16 +13,14 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-      </ul>
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control-nav" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
-      <ul class="nav navbar-nav navbar-right">
-         <ul class="nav navbar-nav navbar-right">
+  <ul class="nav navbar-nav">
+  <%= form_tag search_accounts_path, method: :get, class: "navbar-form navbar-left" do %>
+      <p>
+        <%= text_field_tag :search, params[:search], class: "form-control" %>
+        <%= submit_tag "Search", name: nil, class: "btn btn-default" %>
+      </p>
+  <% end %>
+<ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
           <li> <%= link_to "Create Account", new_account_path, class: "fa fa-user" %></li>
           <li> <%= link_to "Show Accounts", accounts_path, class: "fa fa-users" %></li>
@@ -36,4 +34,4 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-</div>
+
