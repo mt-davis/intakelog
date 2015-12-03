@@ -17,8 +17,8 @@ gem 'will_paginate-bootstrap'
 gem 'carrierwave'
 gem "fog"
 gem "figaro"
-gem 'tzinfo-data', platforms: [:mingw, :mswin]
 gem 'execjs'
+gem 'tzinfo-data', platforms: [:mingw, :mswin]
 gem "mini_magick"
 gem 'devise'
 gem 'searchkick'

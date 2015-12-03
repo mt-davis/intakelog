@@ -3,7 +3,14 @@ class AccountsController < ApplicationController
   before_action :set_account, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
-
+  
+  def search
+  if params[:search].present?
+    @account = Account.search(params[:search])
+  else
+    @account = Account.all
+  end
+  end
   def index
     @account = Account.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 8)
   end
