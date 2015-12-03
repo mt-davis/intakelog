@@ -22,7 +22,8 @@
   </p>
 <% end %>
       <ul class="nav navbar-nav navbar-right">
-         <ul class="nav navbar-nav navbar-right">
+  <ul class="nav navbar-nav">
+<ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
           <li> <%= link_to "Create Account", new_account_path, class: "fa fa-user" %></li>
           <li> <%= link_to "Show Accounts", accounts_path, class: "fa fa-users" %></li>
@@ -33,7 +34,6 @@
           <li><%= link_to "Sign in", new_user_session_path, class: "fa fa-sign-in" %></li>
         <% end %>
       </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+   <!--  </div><!-- /.navbar-collapse -->
+ <!-- </div><!-- /.container-fluid -->
 </nav>
-</div>

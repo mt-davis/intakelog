@@ -20,8 +20,10 @@ ActiveRecord::Schema.define(version: 20150910164909) do
     t.string   "phone"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "program_name"
+    t.text     "program_program"
     t.integer  "program_id"
-    t.boolean  "return_client", default: false
+    t.boolean  "return_client",   default: false
     t.integer  "insurance_id"
   end
 
@@ -41,12 +43,6 @@ ActiveRecord::Schema.define(version: 20150910164909) do
 
   create_table "programs", force: true do |t|
     t.string   "program"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "returns", force: true do |t|
-    t.boolean  "return"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

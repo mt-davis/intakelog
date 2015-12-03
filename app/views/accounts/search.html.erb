@@ -1,3 +1,4 @@
+<h1>Listing Client</h1>
 <table class="table table-hover table-condensed">
     <tr>
       <th>First name</th>
@@ -32,3 +33,10 @@
     <% end %>
   </tbody>
 </table>
+=======
+</table>
+
+<br>
+<%= will_paginate @account , renderer: BootstrapPagination::Rails %>
+<br>
+<%= link_to 'Add Client', new_account_path %>
