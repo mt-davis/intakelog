@@ -1,22 +1,153 @@
-  <div class="jumbotron">
-  <div class="center-text">
-    <% if user_signed_in? %>
-  <h1>Bridges InTake App</h1>
-  <p>Please Remember to Log Out Once You Are Done.</p>
-  <% else %> 
-  <h1>Welcome To Bridges InTake App</h1>
-  <p>For Bridges Employees Only.</p>
-  <div class="btn"></div>
-  <center><%= link_to "Sign in", new_user_session_path, class: "btn btn-primary btn-lg" %></center>
-  </div>
-  <br>
-  <br>
-  <blockqoute>
-    <div class="blockqoute">
-    The true sign of intelligence is not knowledge but imagination.<br>
-    ~ Albert Einstein
-  </blockqoute>
-  </div>
-  <% end %>
-</div>
-</div>
+<header>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1>Bridges Intake Call Log Application</h1>
+                <hr>
+                <p>The true sign of intelligence is not knowledge but imagination.
+                <br>~ Albert Einstein</p>
+                <%= link_to "Sign in", new_user_session_path, class: "btn btn-primary" %>
+            </div>
+        </div>
+    
+    </header>
+
+    <section class="bg-primary" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">You Can Help</h2>
+                    <hr class="light">
+                    <p class="text-faded">Together, we can help the children, families, adults and young adults who turn to Bridges when their lives become unmanageable becuase of mental illness or addiction. No one should ever be turned away from the help they are seeking, We believe all lives matter, regardless of the reasons they need a helping hand.</p>
+                    <!--<a href="#" class="btn btn-default btn-xl">Get Started!</a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Bridges At Your Service</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+                <div class="col-lg-6 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-plus-square wow bounceIn text-primary" data-wow-delay=".2s"></i>
+                        <h3>24 Hour Access</h3>
+                        <p class="text-muted">Call 203.878.6365 24 hours a day / 7 days a week.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-heartbeat wow bounceIn text-primary" data-wow-delay=".3s"></i>
+                        <h3>Made with Love</h3>
+                        <p class="text-muted">Make an impact in someone's life!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="no-padding" id="portfolio">
+        <div class="container-fluid">
+            <div class="row no-gutter">
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#" class="portfolio-box">
+                      <%= image_tag '1.jpg', class: 'img-responsive'%>
+                        <!-- <img src="../img/portfolio/1.jpg" class="img-responsive" alt=""> -->
+                        <div class="portfolio-box-caption">
+
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#" class="portfolio-box">
+                      <%= image_tag '2.jpg', class: 'img-responsive'%>
+                        <!-- <img src="../img/portfolio/2.jpg" class="img-responsive" alt=""> -->
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#" class="portfolio-box">
+                      <%= image_tag '3.jpg', class: 'img-responsive'%>
+                        <!-- <img src="../img/portfolio/3.jpg" class="img-responsive" alt=""> -->
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#" class="portfolio-box">
+                      <%= image_tag '4.jpg', class: 'img-responsive'%>
+                        <!-- <img src="../img/portfolio/4.jpg" class="img-responsive" alt=""> -->
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                               
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#" class="portfolio-box">
+                      <%= image_tag '5.jpg', class: 'img-responsive'%>
+                        <!-- <img src="../img/portfolio/5.jpg" class="img-responsive" alt=""> -->
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#" class="portfolio-box">
+                      <%= image_tag '6.jpg', class: 'img-responsive'%>
+                        <!-- <img src="../img/portfolio/6.jpg" class="img-responsive" alt=""> -->
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                               
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--<aside class="bg-dark">
+        <div class="container text-center">
+            <div class="call-to-action">
+                <h2>Free Download at Start Bootstrap!</h2>
+                <a href="#" class="btn btn-default btn-xl wow tada">Download Now!</a>
+            </div>
+        </div>
+    </aside>-->
+
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Let's Get In Touch!</h2>
+                    <hr class="primary">
+                    <p>Have questions or issue with this application? Give us a call or send us an email and we will get back to you as soon as possible!</p>
+                </div>
+                <div class="col-lg-4 col-lg-offset-2 text-center">
+                    <i class="fa fa-phone fa-3x wow bounceIn"></i>
+                    <p>Ext 396</p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                    <p><a href="mailto:helpdesk@bridgesmilford.org">helpdesk@bridgesmilford.org</a></p>
+                </div>
+            </div>
+        </div>
+    </section>

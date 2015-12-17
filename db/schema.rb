@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150910164909) do
+ActiveRecord::Schema.define(version: 20151216145710) do
 
   create_table "accounts", force: true do |t|
     t.string   "first_name"
@@ -25,6 +25,12 @@ ActiveRecord::Schema.define(version: 20150910164909) do
     t.integer  "program_id"
     t.boolean  "return_client",   default: false
     t.integer  "insurance_id"
+  end
+
+  create_table "atotals", force: true do |t|
+    t.decimal  "total"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "insurances", force: true do |t|
