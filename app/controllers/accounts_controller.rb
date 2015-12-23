@@ -13,7 +13,7 @@ class AccountsController < ApplicationController
   end
 
   def index
-    @account = Account.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 8)
+    @account = Account.all.order("created_at DESC").page(params[:page]).per(5)
   end
 
   def show

@@ -35,6 +35,6 @@
 </table>
 
 <br>
-<%= will_paginate @account , renderer: BootstrapPagination::Rails %>
+<%= paginate @account %>
 <br>
 <%= link_to 'Add Client', new_account_path, class: "btn btn-primary" %>
