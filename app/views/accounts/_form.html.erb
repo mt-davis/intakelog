@@ -29,7 +29,7 @@
     <%= f.collection_select :program_id, Program.all, :id, :program, {prompt: "Choose a Program"}, {class: "btn btn-default dropdown-toggle"} %>
   </div>
   <div class="form-group">
-   <%= f.label :insurance_id %><br>
+   <%= f.label :insurance %><br>
     <%= f.collection_select :insurance_id, Insurance.all, :id, :name, {prompt: "Choose an Insurance"}, {class: "btn btn-default dropdown-toggle"} %>
   </div>
   <div class="form-group">
