@@ -9,7 +9,7 @@ ActiveAdmin.setup do |config|
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
   #
-  # config.site_title_link = "/"
+  # config.site_title_link = "#"
 
   # Set an optional image to be displayed for the header
   # instead of a string (overrides :site_title)
@@ -25,6 +25,19 @@ ActiveAdmin.setup do |config|
   #
   # eg:
   #   config.default_namespace = :hello_world
+  
+  config.namespace :admin do |admin|
+  admin.build_menu do |menu|
+    menu.add label: "The Application", url: "/", html_options: { target: :blank }, priority: 0
+
+    menu.add label: "Sites" do |sites|
+      sites.add label: "Google",   url: "http://google.com", html_options: { target: :blank }
+      sites.add label: "Facebook", url: "http://facebook.com"
+      sites.add label: "Github",   url: "http://github.com"
+    end
+  end
+end
+
   #
   # This will create resources in the HelloWorld module and
   # will namespace routes to /hello_world/*
@@ -112,14 +125,14 @@ ActiveAdmin.setup do |config|
   # roots for each namespace.
   #
   # Default:
-  # config.root_to = 'dashboard#index'
+   config.root_to = 'dashboard#index'
 
   # == Admin Comments
   #
   # This allows your users to comment on any resource registered with Active Admin.
   #
   # You can completely disable comments:
-  # config.comments = false
+   config.comments = false
   #
   # You can disable the menu item for the comments index page:
   # config.show_comments_in_menu = false
@@ -214,7 +227,7 @@ ActiveAdmin.setup do |config|
   #
   # If you wanted to add a static menu item to the default menu provided:
   #
-  #   config.namespace :admin do |admin|
+  #  config.namespace :admin do |admin|
   #     admin.build_menu :default do |menu|
   #       menu.add label: "My Great Website", url: "http://www.mygreatwebsite.com", html_options: { target: :blank }
   #     end

@@ -25,11 +25,12 @@ ActiveAdmin.register_page "Dashboard" do
       div :class => "column" do
     columns do
       panel "Last 5 Clients Created" do
-      table_for Account.order('created_at desc').limit(5) do
+      table_for Account.order('created_at desc').limit(10) do
         column :first_name do |account|
         link_to account.first_name, [:admin, account]
       end
         column :last_name
+        column "Phone Number", :phone
         column :created_at
       end
       strong { link_to "View All Clients", admin_accounts_path }
@@ -38,7 +39,7 @@ ActiveAdmin.register_page "Dashboard" do
 end
     
     
-  #columns do
+  #column do
   div :class => "column" do
       columns do
         div :class => "column" do
@@ -50,8 +51,19 @@ end
       end
     end
   end
+  div :class => "column" do
+      columns do
+        div :class => "column" do
+        panel "Client Locations" do
+        div do
+          br
+          text_node %{<iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJpVER8hFT5okR5XBhBVttmq4&key=AIzaSyCO0RsNGjs2S8rgoMRWoGmzHGdicK3sx9k"  width="500" height="300" scrolling="no" frameborder="no"></iframe>}.html_safe
+        end
+      end
+    end
+  end
 end
 end
 end
 end
-#end
+end
