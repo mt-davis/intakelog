@@ -1,4 +1,6 @@
-<h1>Listing Client</h1>
+<div class="row">
+<div class="col-md-8">
+    <h1>Listing Client</h1>
 
 <table class="table table-hover table-condensed">
     <tr>
@@ -12,16 +14,14 @@
   </thead>
 
   <tbody>
-    <% @account.each do |account| do %>
-    <p><%= account.count %></p>
-    <%end %>
-    
+   
+       <% @account.each do |account| %>
       <tr>
+        
         <td><%= account.first_name %></td>
         <td><%= account.last_name %></td>
         <td><%= account.address %></td>
         <td><%= account.phone %></td>
-
         <td>
 <%if account.program%>
    <%=account.program.program%>
@@ -43,3 +43,13 @@
 <%= paginate @account %>
 <br>
 <%= link_to 'Add Client', new_account_path, class: "btn btn-primary" %>
+</div>
+
+<div class="col-md-4">
+    <div align="center">
+    <h1>App Info</h1>
+    <b>Current Client Count</b>
+    <%= @account.count %>
+  </div>
+</div>
+</div>
