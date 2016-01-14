@@ -14,7 +14,10 @@ class AccountsController < ApplicationController
 
   def index
     @account = Account.all.order("created_at DESC").page(params[:page]).per(10)
+    @account = Account.distinct.count('date')
   end
+  
+end
 
   def show
     @notes = Note.where(account_id: @account.id) #Where a note belong to the current account
@@ -52,4 +55,3 @@ class AccountsController < ApplicationController
     def account_params
       params.require(:account).permit(:first_name, :last_name, :return_client, :program_id, :insurance_id, :address, :phone)
     end
-end

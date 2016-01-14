@@ -12,7 +12,9 @@
   </thead>
 
   <tbody>
-    <% @account.each do |account| %>
+    <% @account.each do |account| do %>
+    <p><%= account.count %></p>
+    <%end %>
     
       <tr>
         <td><%= account.first_name %></td>
@@ -30,7 +32,7 @@
         <td><%= link_to ' Show', account, class: 'fa fa-eye', 'data-toggle': 'tooltip', 'data-placement':'top', title: 'Show Client Account' %></td>
         <td><%= link_to ' Edit', edit_account_path(account), class: "fa fa-pencil-square-o", 'data-toggle': 'tooltip', 'data-placement':'top', title: 'Edit Client Account'  %></td>
         <% if user_signed_in? && current_user.admin? %>
-        <td><%= link_to 'Destroy Client', account, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %></td>
+        <td><%= link_to ' Delete', account, method: :delete, data: { confirm: 'Are you sure?' }, class: "fa fa-trash", 'data-toggle': 'tooltip', 'data-placement':'top', title: 'Delete Client Account' %></td>
       </tr>
     <% end %>
     <% end %>
