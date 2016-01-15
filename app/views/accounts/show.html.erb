@@ -1,6 +1,9 @@
 <div class="container">
+    
 <div class="row">
+  
   <div class="col-md-3">
+    <div class="well ">
 <p>
      <strong>First name:</strong>
   <%= @account.first_name %>
@@ -39,12 +42,15 @@
 <strong>Created:</strong> 
 <%= @account.created_at.strftime ("%-b-%-d-%y") %>
 </p>
+</div>
 
     <%= link_to "Write a note", new_account_note_path(@account), class: "btn btn-primary" %>
 
     <br>
     <br>
   </div>
+
+  
   <div class="col-md-9">
     <% if @notes.blank? %>
       <h3>No notes yet. Be the first to write one!</h3>

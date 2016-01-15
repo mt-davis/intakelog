@@ -14,7 +14,7 @@ class AccountsController < ApplicationController
 
   def index
     @account = Account.uniq.order("created_at DESC").page(params[:page]).per(10)
-    #@account = Account.distinct.count("created_at")
+    @accounts_count = Account.uniq.count
   end
 
 

@@ -2,12 +2,12 @@
 <div class="col-md-8">
     <h2>Client Listing</h2>
     <%= link_to ' Add Client', new_account_path, class: "fa fa-plus-square" %>
-    <div class="well well-sm">
+    <div class="well ">
 <table class="table table-hover table-condensed">
     </div>
     <tr>
-      <th>First name</th>
-      <th>Last name</th>
+      <th>First Name</th>
+      <th>Last Name</th>
       <th>Address</th>
       <th>Phone</th>
       <th>Program</th>
@@ -18,7 +18,7 @@
   <tbody>
    
        <% @account.each do |account| %>
-      <tr>
+      <tr class="info">
         
         <td><%= account.first_name %></td>
         <td><%= account.last_name %></td>
@@ -52,7 +52,7 @@
         <h2>App Info</h2>
         <div class="well well-sm">
     <b>Current Client Count</b>
-    <%= @account.count %>
+    <%= @accounts_count %>
   </div>
 </div>
 </div>
