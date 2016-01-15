@@ -1,8 +1,10 @@
-<div class="row">
+ <div class="row">
 <div class="col-md-8">
-    <h1>Listing Client</h1>
-
+    <h2>Client Listing</h2>
+    <%= link_to ' Add Client', new_account_path, class: "fa fa-plus-square" %>
+    <div class="well well-sm">
 <table class="table table-hover table-condensed">
+    </div>
     <tr>
       <th>First name</th>
       <th>Last name</th>
@@ -41,15 +43,19 @@
 
 <br>
 <%= paginate @account %>
-<br>
-<%= link_to 'Add Client', new_account_path, class: "btn btn-primary" %>
+</div>
 </div>
 
 <div class="col-md-4">
+    <br>
     <div align="center">
-    <h1>App Info</h1>
+        <h2>App Info</h2>
+        <div class="well well-sm">
     <b>Current Client Count</b>
     <%= @account.count %>
   </div>
 </div>
 </div>
+</div>
+</div>
+
