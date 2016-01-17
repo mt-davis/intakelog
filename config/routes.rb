@@ -6,12 +6,15 @@ Rails.application.routes.draw do
 
   devise_for :users do
  end
+ 
   resources :accounts do
     collection do
      get 'search'
     end
+    
   resources :notes, except: [:show, :index]
 end
+
 resources :programs
 
    get 'pages/index'
