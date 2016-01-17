@@ -26,5 +26,6 @@ gem "mini_magick"
 gem 'devise'
 gem 'searchkick'
 group :development, :test do
+gem "rake"
   gem 'rspec-rails', '~> 3.0'
 end
