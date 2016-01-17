@@ -3,4 +3,8 @@ language: ruby
 rvm:
   - 2.2.1
   
+before_install: "rm ${BUNDLE_GEMFILE}.lock"
+
+before_script: "bundle update"
+
 script: "bundle exec rake test"
