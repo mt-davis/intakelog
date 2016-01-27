@@ -43,27 +43,17 @@ end
   div :class => "column" do
       columns do
         div :class => "column" do
-        panel "New Relic Info" do
-        div do
-          br
-          text_node %{<iframe src="https://rpm.newrelic.com/public/charts/6VooNO2hKWB" width="500" height="300" scrolling="no" frameborder="no"></iframe>}.html_safe
-        end
+        
       end
     end
   end
   div :class => "column" do
       columns do
         div :class => "column" do
-        panel "Client Locations" do
-        div do
-          br
-          text_node %{<iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJpVER8hFT5okR5XBhBVttmq4&key=AIzaSyCO0RsNGjs2S8rgoMRWoGmzHGdicK3sx9k"  width="500" height="300" scrolling="no" frameborder="no"></iframe>}.html_safe
+        
         end
       end
     end
   end
-end
-end
-end
 end
 end

@@ -1,0 +1,51 @@
+<nav class="navbar n">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand"  href="/">
+      <%= image_tag("lg-popsicle.png", :alt => "Popsicle") %>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="default"><a href="#"></a></li>
+        
+          </ul>
+        </li>
+      </ul>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+      </ul>
+     <%= form_tag search_accounts_path, method: :get, class: "navbar-form navbar-left" do %>
+  <p>
+    <%= text_field_tag :search, params[:search], class: "form-control" %>
+    <%= submit_tag  "Search", name: nil, class: "btn btn-default" %>
+  </p>
+<% end %>
+      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav">
+        <% if user_signed_in? %>
+                 <li> <%= link_to "Create Account", new_account_path, class: "fa fa-user" %></li>
+                 <li> <%= link_to "Show Accounts", accounts_path, class: "fa fa-users" %></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hi, <%= current_user.first_name %> <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+          <li> <%= link_to "Edit Profile", edit_user_registration_path, class: "fa fa-pencil-square-o" %></li>
+          <li> <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "fa fa-sign-out" %></li>
+          </ul>
+          <ul class = "nav pull-right">
+     </ul>
+        <% else %>
+         <!-- <%= link_to "Sign up", new_user_registration_path,  class: "fa fa-sign-in" %> -->
+          <li><%= link_to "Sign in", new_user_session_path, class: "fa fa-sign-in" %></li>
+        <% end %>
+      </ul>
+   
+</nav>
