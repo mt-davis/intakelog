@@ -378,6 +378,7 @@ DEPENDENCIES
   rails (~> 4.2, >= 4.2.5)
   rails_12factor
   railties (~> 4.2, >= 4.2.5)
+  rake
   rspec-rails (~> 3.0)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)

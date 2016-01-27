@@ -20,6 +20,7 @@
           </ul>
         </li>
       </ul>
+<<<<<<< HEAD
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
       </ul>
@@ -29,6 +30,18 @@
     <%= submit_tag  "Search", name: nil, class: "btn btn-default" %>
   </p>
 <% end %>
+=======
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+        <%= form_tag search_accounts_path, method: :get, class: "navbar-form navbar-left" do %>
+          
+        <%= text_field_tag :search, params[:search], class: "form-control" %>
+        <%= submit_tag  "Search", name: nil, class: "btn btn-default" %>
+        <% end %>
+        </div>
+       
+      </form>
+>>>>>>> master
       <ul class="nav navbar-nav navbar-right">
       <ul class="nav navbar-nav">
         <% if user_signed_in? %>

@@ -25,6 +25,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 gem "mini_magick"
 gem 'devise'
 gem 'searchkick'
+group :test do
+gem "rake"
+end
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
 end
