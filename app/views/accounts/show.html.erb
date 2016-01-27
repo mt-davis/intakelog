@@ -16,11 +16,11 @@
 
 <p>
   <strong>Returing Client?:</strong>
-  <%= @account.return_client %>
+  <%= @account.return_client ? 'Yes' : 'No'  %>
 </p>
 <p>
   <strong>Program:</strong>
-  <%= @account.program.program %>
+  <%= @account.program.name %>
 </p>
 
 <p>
