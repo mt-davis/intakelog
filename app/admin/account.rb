@@ -16,8 +16,4 @@ index do
   actions
 end
  scope :all, :default => true
- 
- scope :adult, default: true do |accounts|
-  accounts.program_name('adult')
-end
 end
