@@ -24,7 +24,7 @@ ActiveAdmin.register_page "Dashboard" do
     #columns do
       div :class => "column" do
     columns do
-      panel "Last 5 Clients Created" do
+      panel "Last 10 Clients Created" do
       table_for Account.order('created_at desc').limit(10) do
         column :first_name do |account|
         link_to account.first_name, [:admin, account]

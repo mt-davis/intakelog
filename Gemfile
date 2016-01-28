@@ -14,6 +14,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'rails_12factor', group: :production
 gem 'pg', group: :production
 gem 'activeadmin', github: 'activeadmin'
+#gem 'activeadmin', github: 'activeadmin', branch: '0-6-stable'
 gem 'kaminari'
 #gem 'will_paginate', '~> 3.0'
 #gem 'will_paginate-bootstrap'
