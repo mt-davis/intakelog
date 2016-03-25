@@ -21,16 +21,20 @@
     <%= f.text_field :last_name, class: "form-control" %>
     </div>
     <div class="form-group">
-    <%= f.label :return_client %><br>
-    <%= f.check_box :return_client %> Returning Client?
+    <%= f.label :return_client, "Returing Client:" %><br>
+    <%= f.check_box :return_client %> "Check Box For Yes"
     </div>
     <div class="form-group">
-    <%= f.label :program %><br>
+    <%= f.label :program, "Program:" %><br>
     <%= f.collection_select :program_id, Program.all, :id, :name, {prompt: "Choose a Program"}, {class: "btn btn-default dropdown-toggle"} %>
   </div>
   <div class="form-group">
-   <%= f.label :insurance %><br>
+   <%= f.label :insurance, "Insurance:" %><br>
     <%= f.collection_select :insurance_id, Insurance.all, :id, :name, {prompt: "Choose an Insurance"}, {class: "btn btn-default dropdown-toggle"} %>
+  </div>
+  <div class="form-group">
+   <%= f.label :referred, "Reason:" %><br>
+    <%= f.collection_select :referred_id, Referred.all, :id, :name, {prompt: "What Happen?"}, {class: "btn btn-default dropdown-toggle"} %>
   </div>
   <div class="form-group">
     <%= f.label :address %><br> example: 123 Anystreet, New Haven, CT 06515

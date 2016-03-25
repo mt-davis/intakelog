@@ -6,6 +6,12 @@ class Account < ActiveRecord::Base
     belongs_to :program
     belongs_to :insurance
     has_many :notes
+    belongs_to :referred
+    
+    def referred
+        super || Referred.new
+    end
+
     
     
     validates :first_name, :last_name, :address, :phone, presence: true
