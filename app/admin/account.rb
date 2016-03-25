@@ -13,6 +13,7 @@ index do
   column :return_client
   column :program
   column :insurance
+  column :referred
   actions
 end
  scope :all, :default => true

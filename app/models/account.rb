@@ -8,10 +8,11 @@ class Account < ActiveRecord::Base
     has_many :notes
     belongs_to :referred
     
+    #Refactoring with the Null Object Pattern
     def referred
         super || Referred.new
     end
-
+    #
     
     
     validates :first_name, :last_name, :address, :phone, presence: true
